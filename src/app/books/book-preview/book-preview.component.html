@@ -1,0 +1,4 @@
+<div *ngIf="book" style="margin:1rem">
+  <div>{{ book.title }}</div>
+  <div>{{ book.isbn }} <button (click)="selectThisBook()" class="btn btn-info">show me more</button></div>
+</div>

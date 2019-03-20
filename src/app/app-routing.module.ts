@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {AboutComponent} from './about/about.component';
+import {MyPreloadingStrategyService} from './my-preloading-strategy.service';
 
 const routes : Routes = [
 
@@ -21,7 +22,7 @@ const routes : Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy: MyPreloadingStrategyService})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
